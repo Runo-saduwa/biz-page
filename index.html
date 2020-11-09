@@ -36,7 +36,7 @@
                </div>
                <div class="bizPage_confirmBiz">
                   <h2 class="title">Is this your business? <span class="red_star">*</span></h2>
-                  <div class="confirmBiz">
+                  <div class="inlineRadioGroup">
                      <label class="container">Yes
                      <input type="radio" name="new_radio">
                      <span class="checkmark"></span>
@@ -59,32 +59,53 @@
                      </div>
                      <div class="accordion__body">
                         <fieldset class="field_set">
+                           <label for="name">Upload Photos</label>
+                           <input  class="file-input" accept="image/png, image/jpeg" type="file" id="file" name="file" multiple>
+                        </fieldset>
+                        <fieldset class="field_set">
                            <label for="name">Business Name <span class="red_star">*</span></label>
-                           <input type="text" class="input" placeholder="Business Name">
+                           <input type="text" class="input" placeholder="Some Business Inc." required>
                         </fieldset>
                         <fieldset class="field_set">
                            <label for="name">address <span class="red_star">*</span></label>
-                           <input type="text" class="input" placeholder="Address">
+                           <input type="text" class="input" placeholder="2121 Pearl St." required>
                         </fieldset>
                         <fieldset class="field_set">
                            <label for="name">city</label>
-                           <input type="text" class="input" placeholder="City">
+                           <input type="text" class="input" placeholder="Eugene">
                         </fieldset>
                         <fieldset class="field_set">
                            <label for="name">postal code</label>
-                           <input type="text" class="input" placeholder="Postal Code">
+                           <input type="text" class="input" placeholder="97405">
                         </fieldset>
                         <fieldset class="field_set">
                            <label for="name">phone <span class="red_star">*</span></label>
-                           <input type="text" class="input" placeholder="+(123) - XXXX XXXX">
+                           <input type="tel" class="input" placeholder="+(123) - XXXX XXXX" required>
+                        </fieldset>
+                        <fieldset class="field_set">
+                           <label for="name">Do you have access to this phone number? <span class="red_star">*</span></label>
+                           <div class="inlineRadioGroup">
+                              <label class="container">Yes
+                              <input type="radio" name="accessible_number" id="accessible_option">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="container">No
+                              <input type="radio" name="accessible_number" id="unaccessible_option">
+                              <span class="checkmark"></span>
+                              </label>
+                           </div>
+                        </fieldset>
+                        <fieldset class="field_set hide" id="alternatePhone">
+                           <label for="name">Alternate Phone (include country code, no spaces)</label>
+                           <input type="tel" class="input" placeholder="(555) 5555 555">
                         </fieldset>
                         <fieldset class="field_set">
                            <label for="name">Mobile (for secondary verification if required)</label>
-                           <input type="text" class="input" placeholder="(555) 5555 555">
+                           <input type="tel" class="input" placeholder="(555) 5555 555">
                         </fieldset>
                         <fieldset class="field_set">
                            <label for="name">Email <span class="red_star">*</span></label>
-                           <input type="text" class="input" placeholder="business@email.com">
+                           <input type="email" class="input" placeholder="business@email.com" required>
                         </fieldset>
                         <fieldset class="field_set">
                            <label for="name">Category</label>
@@ -204,7 +225,7 @@
                         </fieldset>
                         <fieldset class="field_set">
                            <label for="name">Description</label>
-                           <textarea id="description" name="decription" rows="8" cols="50" class="textarea-input"></textarea>
+                           <textarea id="description" name="decription" rows="8" cols="50" class="textarea-input" placeholder="type your description here..."></textarea>
                         </fieldset>
                      </div>
                   </div>
@@ -244,22 +265,21 @@
                          <span class="input_group_label">
                           <i class="fab fa-facebook-f facebook"></i>
                         </span>
-                          <input type="text" class="input_group_inputField" placeholder="https://www.facebook.com/example">
+                          <input type="url" class="input_group_inputField" placeholder="https://www.facebook.com/example">
                         
                        </div>
                        <div class="input_group">
                          <span class="input_group_label">
                           <i class="fab fa-youtube youtube"></i>
                         </span>
-                          <input type="text" class="input_group_inputField" placeholder="https://www.youtube.com/example">
+                          <input type="url" class="input_group_inputField" placeholder="https://www.youtube.com/example">
                          
                        </div>
                        <div class="input_group">
                          <span class="input_group_label">
                           <i class="fab fa-instagram instagram"></i>
                         </span>
-                          <input type="text" class="input_group_inputField" placeholder="@textras">
-                         
+                          <input type="text" class="input_group_inputField" placeholder="@textras" pattern="\s([@#][\w_-]+)">
                        </div>
                        </fieldset>
 
@@ -302,6 +322,16 @@
       </section>
       <script>
          const accordionContainer = document.querySelectorAll('.accordion');
+         const accessibleOption = document.querySelector('#accessible_option');
+         const unaccessibleOption = document.querySelector('#unaccessible_option');
+         const alternatePhone = document.querySelector('#alternatePhone');
+
+         accessibleOption.addEventListener('click', () => {
+            alternatePhone.style.display = "none"
+         })
+         unaccessibleOption.addEventListener('click', () => {
+            alternatePhone.style.display = "block"
+         })
          accordionContainer.forEach(accordion => accordion.firstElementChild.addEventListener('click', () => {
            accordion.classList.toggle('active');
          }))
