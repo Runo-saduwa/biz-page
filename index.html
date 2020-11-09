@@ -1,174 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/index.css">
-    <title>Biz Page</title>
-</head>
-<body>
-
-   <section class="bizPage_wrapper">
-    <header class="bizPage_header">
-        <div class="bizPage_header-content">
-        <h1>Whistler Java Cafe</h1>
-        <h5>4359 Main St</h5> 
-        </div>  
-    </header>
-
-    <main class="bizPage_Form-card">
-        <form action="">
-
-        <div class="bizPage_Form-card_subCard">
-            <h2 class="title">Should this business listing be removed?</h2>
-            <label class="container">Yes, this is a duplicate of another business
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">Yes, this business has been closed.
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">No
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-        </div>
-
-
-        <div class="bizPage_confirmBiz">
-        <h2 class="title">Is this your business?</h2>
-          <div class="confirmBiz">
-            <label class="container">Yes
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">No
-                <input type="checkbox">
-                <span class="checkmark"></span>
-            </label>
-          </div>
-        </div>
-
-      
-
-            <section class="accordion_container">
-  
-
-                <!-- BEGINNING OF ACCORDION -->
-                <div class="accordion">
-
-                    <div class="accordion__header">
-                      <div class="accordion_title">
-                        <img src="./assets/svgs/green-caret.svg" alt="caret" />
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./styles/index.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css" integrity="sha512-D0B6cFS+efdzUE/4wh5XF5599DtW7Q1bZOjAYGBfC0Lg9WjcrqPXZto020btDyrlDUrfYKsmzFvgf/9AB8J0Jw==" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/fontawesome.min.css" integrity="sha512-kJ30H6g4NGhWopgdseRb8wTsyllFUYIx3hiUwmGAkgA9B/JbzUBDQVr2VVlWGde6sdBVOG7oU8AL35ORDuMm8g==" crossorigin="anonymous" />
+      <title>Biz Page</title>
+   </head>
+   <body>
+      <section class="bizPage_wrapper">
+         <header class="bizPage_header">
+            <div class="bizPage_header-content">
+               <h1>Whistler Java Cafe</h1>
+               <h5>4359 Main St</h5>
+            </div>
+         </header>
+         <main class="bizPage_Form-card">
+            <form action="">
+               <div class="bizPage_Form-card_subCard">
+                  <h2 class="title">Should this business listing be removed?</h2>
+                  <label class="container">Yes, this is a duplicate of another business
+                  <input type="radio" name="radio">
+                  <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Yes, this business has been closed.
+                  <input type="radio" name="radio">
+                  <span class="checkmark"></span>
+                  </label>
+                  <label class="container">No
+                  <input type="radio" name="radio">
+                  <span class="checkmark"></span>
+                  </label>
+               </div>
+               <div class="bizPage_confirmBiz">
+                  <h2 class="title">Is this your business? <span class="red_star">*</span></h2>
+                  <div class="confirmBiz">
+                     <label class="container">Yes
+                     <input type="radio" name="new_radio">
+                     <span class="checkmark"></span>
+                     </label>
+                     <label class="container">No
+                     <input type="radio" name="new_radio">
+                     <span class="checkmark"></span>
+                     </label>
+                  </div>
+               </div>
+               <section class="accordion_container">
+                  <!-- BEGINNING OF ACCORDION -->
+                  <div class="accordion">
+                     <div class="accordion__header">
+                        <img src="./assets/svgs/green-caret.svg" alt="caret" class="caret" />
                         <div class="summary">
                            <h1>Basic Information</h1>
                            <p>Basic information for the worldwide marketpalce</p>
                         </div>
-                      </div>
-                      <img src="./assets/svgs/plus.svg" alt="plus" /> 
-                    </div>
-    
-                      <div class="accordion__body">
-
-                      <fieldset class="field_set">
-                        <label for="name">Business Name *</label>
-                        <input type="text" class="input" placeholder="Business Name">
-                      </fieldset>
-                      <fieldset class="field_set">
-                        <label for="name">address</label>
-                        <input type="text" class="input" placeholder="Address">
-                      </fieldset>
-                      <fieldset class="field_set">
-                        <label for="name">city</label>
-                        <input type="text" class="input" placeholder="City">
-                      </fieldset>
-                      <fieldset class="field_set">
-                        <label for="name">postal code</label>
-                        <input type="text" class="input" placeholder="Postal Code">
-                      </fieldset>
-
-                      </div>
-    
+                     </div>
+                     <div class="accordion__body">
+                        <fieldset class="field_set">
+                           <label for="name">Business Name <span class="red_star">*</span></label>
+                           <input type="text" class="input" placeholder="Business Name">
+                        </fieldset>
+                        <fieldset class="field_set">
+                           <label for="name">address <span class="red_star">*</span></label>
+                           <input type="text" class="input" placeholder="Address">
+                        </fieldset>
+                        <fieldset class="field_set">
+                           <label for="name">city</label>
+                           <input type="text" class="input" placeholder="City">
+                        </fieldset>
+                        <fieldset class="field_set">
+                           <label for="name">postal code</label>
+                           <input type="text" class="input" placeholder="Postal Code">
+                        </fieldset>
+                        <fieldset class="field_set">
+                           <label for="name">phone <span class="red_star">*</span></label>
+                           <input type="text" class="input" placeholder="+(123) - XXXX XXXX">
+                        </fieldset>
+                        <fieldset class="field_set">
+                           <label for="name">Mobile (for secondary verification if required)</label>
+                           <input type="text" class="input" placeholder="(555) 5555 555">
+                        </fieldset>
+                        <fieldset class="field_set">
+                           <label for="name">Email <span class="red_star">*</span></label>
+                           <input type="text" class="input" placeholder="business@email.com">
+                        </fieldset>
+                        <fieldset class="field_set">
+                           <label for="name">Category</label>
+                           <select class="select-input" id="cat" name="category" required="">
+                              <option>Active Life</option>
+                              <option>Arts &amp; Entertainment</option>
+                              <option>Automotive</option>
+                              <option>Beauty &amp; Spas</option>
+                              <option>Bicycles</option>
+                              <option>Education</option>
+                              <option>Event Planning &amp; Services</option>
+                              <option>Financial Services</option>
+                              <option>Food</option>
+                              <option>Health &amp; Medical</option>
+                              <option>Home Services</option>
+                              <option>Hotels &amp; Travel</option>
+                              <option>Local Flavor</option>
+                              <option>Local Services</option>
+                              <option>Mass Media</option>
+                              <option>Nightlife</option>
+                              <option>Pets</option>
+                              <option>Professional Services</option>
+                              <option>Public Services &amp; Government</option>
+                              <option>Religious Organizations</option>
+                              <option>Restaurants</option>
+                              <option>Shopping</option>
+                           </select>
+                        </fieldset>
+                        <fieldset class="field_set">
+                           <label for="name">Specific Category</label>
+                           <select class="select-input" id="specific-cat" type="text" name="specific_cat" placeholder="ex. Global Business Databases, Websites">
+                              <option>Amateur Sports Teams</option>
+                              <option>Amusement Parks</option>
+                              <option>Aquariums</option>
+                              <option>Archery</option>
+                              <option>ATV Rentals/Tours</option>
+                              <option>Badminton</option>
+                              <option>Baseball Fields</option>
+                              <option>Basketball Courts</option>
+                              <option>Bathing Area</option>
+                              <option>Batting Cages</option>
+                              <option>Beaches</option>
+                              <option>Beach Volleyball</option>
+                              <option>Bicycle Paths</option>
+                              <option>Bike Rentals</option>
+                              <option>Boating</option>
+                              <option>Bowling</option>
+                              <option>Bungee Jumping</option>
+                              <option>Carousels</option>
+                              <option>Challenge Courses</option>
+                              <option>Climbing</option>
+                              <option>Cycling Classes</option>
+                              <option>Day Camps</option>
+                              <option>Disc Golf</option>
+                              <option>Diving</option>
+                              <option>Escape Games</option>
+                              <option>Experiences</option>
+                              <option>Fencing Clubs</option>
+                              <option>Fishing</option>
+                              <option>Fitness &amp; Instruction</option>
+                              <option>Flyboarding</option>
+                              <option>Soccer</option>
+                              <option>Gliding</option>
+                              <option>Go Karts</option>
+                              <option>Golf</option>
+                              <option>Gun/Rifle Ranges</option>
+                              <option>Gymnastics</option>
+                              <option>Handball</option>
+                              <option>Hang Gliding</option>
+                              <option>Hiking</option>
+                              <option>Horseback Riding</option>
+                              <option>Horse Racing</option>
+                              <option>Hot Air Balloons</option>
+                              <option>Indoor Playcentre</option>
+                              <option>Jet Skis</option>
+                              <option>Kids Activities</option>
+                              <option>Kiteboarding</option>
+                              <option>Lakes</option>
+                              <option>Laser Tag</option>
+                              <option>Lawn Bowling</option>
+                              <option>Leisure Centers</option>
+                              <option>Mini Golf</option>
+                              <option>Mountain Biking</option>
+                              <option>Nudist</option>
+                              <option>Paddleboarding</option>
+                              <option>Paintball</option>
+                              <option>Parks</option>
+                              <option>Playgrounds</option>
+                              <option>Public Plazas</option>
+                              <option>Races &amp; Competitions</option>
+                              <option>Rafting/Kayaking</option>
+                              <option>Recreation Centers</option>
+                              <option>Rock Climbing</option>
+                              <option>Sailing</option>
+                              <option>Skating Rinks</option>
+                              <option>Skiing</option>
+                              <option>Skydiving</option>
+                              <option>Sledding</option>
+                              <option>Snorkeling</option>
+                              <option>Sport Equipment Hire</option>
+                              <option>Sports Clubs</option>
+                              <option>Squash</option>
+                              <option>Summer Camps</option>
+                              <option>Surfing</option>
+                              <option>Surf Lifesaving</option>
+                              <option>Swimming Pools</option>
+                              <option>Tennis</option>
+                              <option>Trampoline Parks</option>
+                              <option>Tubing</option>
+                              <option>Volleyball</option>
+                              <option>Water Parks</option>
+                              <option>Wildlife Hunting Ranges</option>
+                              <option>Ziplining</option>
+                              <option>Zoos</option>
+                              <option>Zorbing</option>
+                           </select>
+                        </fieldset>
+                        <fieldset class="field_set">
+                           <label for="name">Description</label>
+                           <textarea id="description" name="decription" rows="8" cols="50" class="textarea-input"></textarea>
+                        </fieldset>
+                     </div>
                   </div>
-                    <!-- END OF ACCORDION -->
-
-                     <!-- BEGINNING OF ACCORDION -->
-                <div class="accordion">
-
-                    <div class="accordion__header">
-                      <div class="accordion_title">
-                        <img src="./assets/svgs/green-caret.svg" alt="caret" />
+                  <!-- END OF ACCORDION -->
+                  <!-- BEGINNING OF ACCORDION -->
+                  <div class="accordion">
+                     <div class="accordion__header">
+                        <img src="./assets/svgs/green-caret.svg" alt="caret" class="caret" />
                         <div class="summary">
                            <h1>Online Presence</h1>
                            <p>Expand global online presence</p>
                         </div>
-                      </div>
-                      <img src="./assets/svgs/plus.svg" alt="plus" /> 
-                    </div>
-    
-                      <div class="accordion__body hide">
-                       <input type="text">
-                       <input type="text">
-                      </div>
-    
+                     </div>
+                     <div class="accordion__body">
+                      <fieldset class="field_set">
+                        <label for="name">Home Page</label>
+                       <div class="input_group">
+                         <span class="input_group_label">
+                          <i class="fas fa-link link"></i>
+                        </span>
+                          <input type="text" class="input_group_inputField">
+                        
+                       </div>
+                       </fieldset>
+
+
+                      <fieldset class="field_set">
+                        <label for="name">Social Profiles</label>
+                        <p class="followUp-text">Link to Facebook, Google+, Twitter, Yelp, or any other profile this business has on the web.</p>
+                       <div class="input_group">
+                         <span class="input_group_label">
+                          <i class="fab fa-twitter twitter"></i>
+                        </span>
+                          <input type="text" class="input_group_inputField" placeholder="@textras">
+                       </div>
+                       <div class="input_group">
+                         <span class="input_group_label">
+                          <i class="fab fa-facebook-f facebook"></i>
+                        </span>
+                          <input type="text" class="input_group_inputField" placeholder="https://www.facebook.com/example">
+                        
+                       </div>
+                       <div class="input_group">
+                         <span class="input_group_label">
+                          <i class="fab fa-youtube youtube"></i>
+                        </span>
+                          <input type="text" class="input_group_inputField" placeholder="https://www.youtube.com/example">
+                         
+                       </div>
+                       <div class="input_group">
+                         <span class="input_group_label">
+                          <i class="fab fa-instagram instagram"></i>
+                        </span>
+                          <input type="text" class="input_group_inputField" placeholder="@textras">
+                         
+                       </div>
+                       </fieldset>
+
+                     </div>
                   </div>
-                    <!-- END OF ACCORDION -->
-
-                     <!-- BEGINNING OF ACCORDION -->
-                <div class="accordion">
-
-                    <div class="accordion__header">
-                      <div class="accordion_title">
-                        <img src="./assets/svgs/green-caret.svg" alt="caret" />
+                  <!-- END OF ACCORDION -->
+                  <!-- BEGINNING OF ACCORDION -->
+                  <div class="accordion">
+                     <div class="accordion__header">
+                        <img src="./assets/svgs/green-caret.svg" alt="caret" class="caret" />
                         <div class="summary">
                            <h1>Detailed Information</h1>
                            <p>Add hours, contacts and more.</p>
                         </div>
-                      </div>
-                      <img src="./assets/svgs/plus.svg" alt="plus" /> 
-                    </div>
-    
-                      <div class="accordion__body hide">
-                       <input type="text">
-                       <input type="text">
-                      </div>
-    
+                     </div>
+                     <div class="accordion__body">
+                        <input type="text">
+                        <input type="text">
+                     </div>
                   </div>
-                    <!-- END OF ACCORDION -->
-
-                     <!-- BEGINNING OF ACCORDION -->
-                <div class="accordion">
-
-                    <div class="accordion__header">
-                      <div class="accordion_title">
-                        <img src="./assets/svgs/green-caret.svg" alt="caret" />
+                  <!-- END OF ACCORDION -->
+                  <!-- BEGINNING OF ACCORDION -->
+                  <div class="accordion">
+                     <div class="accordion__header">
+                        <img src="./assets/svgs/green-caret.svg" alt="caret" class="caret" />
                         <div class="summary">
                            <h1>Claim & Terms of Use</h1>
                            <p>Claim and accept terms.</p>
                         </div>
-                      </div>
-                      <img src="./assets/svgs/plus.svg" alt="plus" /> 
-                    </div>
-    
-                      <div class="accordion__body hide">
-                       <input type="text">
-                       <input type="text">
-                      </div>
-    
+                     </div>
+                     <div class="accordion__body">
+                        You agree to <a href="#">Terms & Conditions</a> on clicking Post your Business
+                     </div>
                   </div>
-                       <!-- END OF ACCORDION -->
-
-            </section>
-
-
-              <button class="updateBizBtn">Update business details</button>
-
-        </form>
-
-        
-    </main>
-   </section>
-    
-</body>
+                  <!-- END OF ACCORDION -->
+               </section>
+               <button class="updateBizBtn">Update business details</button>
+            </form>
+         </main>
+      </section>
+      <script>
+         const accordionContainer = document.querySelectorAll('.accordion');
+         accordionContainer.forEach(accordion => accordion.firstElementChild.addEventListener('click', () => {
+           accordion.classList.toggle('active');
+         }))
+      </script>
+   </body>
 </html>
