@@ -201,7 +201,8 @@ input[type=number] {
 	border-left: 1px solid #E8E8E8;
 	flex-basis: 80%;
 	padding: 0 10px;
-	box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: none;
 }
 
 .input_group_label {
