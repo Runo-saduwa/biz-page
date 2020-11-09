@@ -56,7 +56,7 @@ input[type=number] {
 	padding: 20px;
 	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
 	border-radius: 15px;
-	border: 0.5px solid var(--darkGreen);
+	border: 2px solid var(--darkGreen);
 }
 
 .bizPage_confirmBiz {
@@ -281,6 +281,10 @@ input[type=number] {
 /* end of checkbox style */
 
 @media (min-width: 768px) {
+  
+.bizPage_header-content h1 {
+	font-size: 40px;
+}
 	.bizPage_Form-card {
 		padding: 5% 25%;
 	}
